@@ -61,36 +61,73 @@ export default function HomePage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col group"
-            >
-              <div className={`w-12 h-12 rounded-2xl bg-${feature.color}-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <span className={`text-3xl text-${feature.color}-600`}>
-                  {feature.title === 'Timetable' && '📅'}
-                  {feature.title === 'Campus Map' && '🗺️'}
-                  {feature.title === 'Canteen' && '🍽️'}
-                  {feature.title === 'Lost & Found' && '🔍'}
-                </span>
-              </div>
-
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-
-              <p className="text-gray-600 flex-1 leading-relaxed mb-8">
-                {feature.description}
-              </p>
-
-              <Link
-                href={feature.href}
-                className={`inline-block px-6 py-3.5 bg-${feature.color}-600 hover:bg-${feature.color}-700 text-white font-medium rounded-2xl text-center transition-all active:scale-95 focus:outline-none focus:ring-4 focus:ring-${feature.color}-300`}
-              >
-                Go to {feature.title}
-              </Link>
+          {/* Timetable Card */}
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span className="text-3xl text-emerald-600">📅</span>
             </div>
-          ))}
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Timetable</h3>
+            <p className="text-gray-600 flex-1 leading-relaxed mb-8">
+              View your weekly class schedule and never miss a lecture.
+            </p>
+            <Link
+              href="/timetable"
+              className="inline-block px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-2xl text-center transition-all active:scale-95 focus:outline-none focus:ring-4 focus:ring-emerald-300"
+            >
+              Go to Timetable
+            </Link>
+          </div>
+
+          {/* Campus Map Card */}
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span className="text-3xl text-blue-600">🗺️</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Campus Map</h3>
+            <p className="text-gray-600 flex-1 leading-relaxed mb-8">
+              Interactive map to help you navigate the university campus.
+            </p>
+            <Link
+              href="/map"
+              className="inline-block px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-2xl text-center transition-all active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-300"
+            >
+              Go to Campus Map
+            </Link>
+          </div>
+
+          {/* Canteen Card */}
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div className="w-12 h-12 rounded-2xl bg-amber-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span className="text-3xl text-amber-600">🍽️</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Canteen</h3>
+            <p className="text-gray-600 flex-1 leading-relaxed mb-8">
+              Browse today’s menu and plan your meals.
+            </p>
+            <Link
+              href="/canteen"
+              className="inline-block px-6 py-3.5 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-2xl text-center transition-all active:scale-95 focus:outline-none focus:ring-4 focus:ring-amber-300"
+            >
+              Go to Canteen
+            </Link>
+          </div>
+
+          {/* Lost & Found Card */}
+          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div className="w-12 h-12 rounded-2xl bg-rose-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <span className="text-3xl text-rose-600">🔍</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">Lost & Found</h3>
+            <p className="text-gray-600 flex-1 leading-relaxed mb-8">
+              Report lost items or search for found belongings.
+            </p>
+            <Link
+              href="/lost-found"
+              className="inline-block px-6 py-3.5 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-2xl text-center transition-all active:scale-95 focus:outline-none focus:ring-4 focus:ring-rose-300"
+            >
+              Go to Lost & Found
+            </Link>
+          </div>
         </div>
       </div>
     </div>
