@@ -1,0 +1,104 @@
+{
+  "menu": [
+    {
+      "day": "Monday",
+      "meals": [
+        {
+          "name": "Grilled Chicken Panini",
+          "description": "Sourdough bread with herb-marinated chicken, mozzarella, roasted peppers, and pesto mayo",
+          "price": 6.90
+        },
+        {
+          "name": "Mediterranean Quinoa Bowl",
+          "description": "Quinoa, chickpeas, cucumber, cherry tomatoes, feta, olives, and lemon-tahini dressing",
+          "price": 5.80
+        },
+        {
+          "name": "Classic Beef Burger",
+          "description": "Angus beef patty, cheddar cheese, lettuce, tomato, onion, and house sauce on a brioche bun",
+          "price": 7.50
+        }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "meals": [
+        {
+          "name": "Thai Green Curry",
+          "description": "Coconut milk curry with tofu, broccoli, carrots, and jasmine rice",
+          "price": 6.70
+        },
+        {
+          "name": "Tuna Niçoise Salad",
+          "description": "Mixed greens, seared tuna, boiled egg, green beans, olives, and vinaigrette",
+          "price": 7.20
+        },
+        {
+          "name": "Falafel Wrap",
+          "description": "Crispy falafel, hummus, tabbouleh, pickled vegetables in a warm flatbread",
+          "price": 5.90
+        }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "meals": [
+        {
+          "name": "Margherita Pizza",
+          "description": "San Marzano tomato sauce, fresh mozzarella, basil, and extra virgin olive oil",
+          "price": 6.50
+        },
+        {
+          "name": "Butter Chicken with Naan",
+          "description": "Tender chicken in creamy tomato gravy served with garlic naan",
+          "price": 7.80
+        },
+        {
+          "name": "Caprese Pasta Salad",
+          "description": "Penne pasta, cherry tomatoes, mozzarella balls, basil, and balsamic glaze",
+          "price": 5.60
+        }
+      ]
+    },
+    {
+      "day": "Thursday",
+      "meals": [
+        {
+          "name": "Beef Stroganoff",
+          "description": "Tender beef strips in mushroom cream sauce served over egg noodles",
+          "price": 8.20
+        },
+        {
+          "name": "Vegan Buddha Bowl",
+          "description": "Sweet potato, kale, avocado, black beans, quinoa, and tahini drizzle",
+          "price": 6.40
+        },
+        {
+          "name": "Salmon Teriyaki",
+          "description": "Grilled salmon fillet glazed with teriyaki sauce, served with steamed rice and broccoli",
+          "price": 9.10
+        }
+      ]
+    },
+    {
+      "day": "Friday",
+      "meals": [
+        {
+          "name": "Fish & Chips",
+          "description": "Crispy battered cod, golden fries, tartar sauce, and mushy peas",
+          "price": 7.90
+        },
+        {
+          "name": "Chicken Caesar Wrap",
+          "description": "Grilled chicken, romaine, parmesan, croutons, and Caesar dressing in a tortilla",
+          "price": 6.30
+        },
+        {
+          "name": "Mushroom Risotto",
+          "description": "Creamy arborio rice with mixed mushrooms, parmesan, and fresh thyme",
+          "price": 6.80
+        }
+      ]
+    }
+  ]
+}
