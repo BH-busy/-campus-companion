@@ -1,6 +1,4 @@
 // app/timetable/page.tsx
-'use client';
-
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -56,60 +54,63 @@ const timetableData = {
   ],
 };
 
-const days = [
-  { key: 'monday', label: 'Monday' },
-  { key: 'tuesday', label: 'Tuesday' },
-  { key: 'wednesday', label: 'Wednesday' },
-  { key: 'thursday', label: 'Thursday' },
-  { key: 'friday', label: 'Friday' },
-] as const;
+const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
 export default function TimetablePage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">Weekly Timetable</h1>
-          <p className="text-gray-600 text-lg">Crestwood University • Spring Semester</p>
+    <div className="min-h-screen bg-gray-50">
+      <main className="max-w-7xl mx-auto px-6 py-8">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Computer Science Timetable</h1>
+          <p className="text-gray-600">Weekly class schedule for Computer Science students</p>
         </div>
-
-        <div className="space-y-12">
-          {days.map((day) => (
-            <section key={day.key} className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-emerald-700 text-white px-8 py-5">
-                <h2 className="text-2xl font-semibold">{day.label}</h2>
-              </div>
-
-              <div className="divide-y">
-                {timetableData[day.key].map((slot, index) => (
-                  <div
-                    key={index}
-                    className={`grid grid-cols-12 px-8 py-5 gap-4 items-center ${
-                      slot.subject.includes('Break') || slot.subject.includes('Lunch')
-                        ? 'bg-gray-50'
-                        : ''
-                    }`}
-                  >
-                    <div className="col-span-12 md:col-span-3 font-medium text-gray-700">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead className="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Time</th>
+                  {days.map((day) => (
+                    <th key={day} className="px-6 py-4 text-left text-sm font-semibold text-gray-900 capitalize">
+                      {day}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                {timetableData.monday.map((slot, index) => (
+                  <tr key={index} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">
                       {slot.time}
-                    </div>
-                    <div className="col-span-12 md:col-span-6 font-semibold text-gray-900">
-                      {slot.subject}
-                    </div>
-                    <div className="col-span-12 md:col-span-3 text-right text-gray-600 font-medium">
-                      {slot.room}
-                    </div>
-                  </div>
+                    </td>
+                    {days.map((day) => {
+                      const daySlot = timetableData[day as keyof typeof timetableData][index];
+                      return (
+                        <td key={day} className="px-6 py-4">
+                          <div className="text-sm">
+                            <div className={`font-medium ${
+                              daySlot.subject.includes('Break') || daySlot.subject.includes('Lunch')
+                                ? 'text-gray-500'
+                                : 'text-gray-900'
+                            }`}>
+                              {daySlot.subject}
+                            </div>
+                            {daySlot.room && (
+                              <div className="text-gray-500 text-xs mt-1">
+                                {daySlot.room}
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                      );
+                    })}
+                  </tr>
                 ))}
-              </div>
-            </section>
-          ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-
-        <div className="text-center text-sm text-gray-500 mt-12">
-          Timetable is subject to change • Please check notice board for updates
-        </div>
-      </div>
+      </main>
     </div>
   );
 }
