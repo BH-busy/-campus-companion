@@ -1,4 +1,4 @@
-// app/timetable/page.tsx
+// app/timetable/page.tsx - fixed
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
