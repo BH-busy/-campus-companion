@@ -4,19 +4,34 @@
       "day": "Monday",
       "meals": [
         {
-          "name": "Grilled Chicken Panini",
-          "description": "Sourdough bread with herb-marinated chicken, mozzarella, roasted peppers, and pesto mayo",
-          "price": 6.90
+          "name": "Avocado Toast with Poached Eggs",
+          "description": "Sourdough toast topped with smashed avocado and free-range poached eggs (high protein breakfast)",
+          "price": 6.5
         },
         {
-          "name": "Mediterranean Quinoa Bowl",
-          "description": "Quinoa, chickpeas, cucumber, cherry tomatoes, feta, olives, and lemon-tahini dressing",
-          "price": 5.80
+          "name": "Vegan Buddha Bowl",
+          "description": "Quinoa, roasted vegetables, chickpeas, and tahini dressing (vegan, gluten-free)",
+          "price": 6.9
         },
         {
-          "name": "Classic Beef Burger",
-          "description": "Angus beef patty, cheddar cheese, lettuce, tomato, onion, and house sauce on a brioche bun",
-          "price": 7.50
+          "name": "Spicy Chicken Wrap",
+          "description": "Grilled chicken with spicy sauce, lettuce, and tomato in a whole wheat wrap",
+          "price": 7.5
+        },
+        {
+          "name": "Mushroom Risotto",
+          "description": "Creamy arborio rice with mushrooms and parmesan (vegetarian)",
+          "price": 6.8
+        },
+        {
+          "name": "Beef Stir Fry",
+          "description": "Tender beef strips with vegetables in a soy-ginger sauce",
+          "price": 7.9
+        },
+        {
+          "name": "Gluten-Free Pancakes",
+          "description": "Fluffy pancakes made with gluten-free flour, served with berries",
+          "price": 6.2
         }
       ]
     },
@@ -24,19 +39,34 @@
       "day": "Tuesday",
       "meals": [
         {
-          "name": "Thai Green Curry",
-          "description": "Coconut milk curry with tofu, broccoli, carrots, and jasmine rice",
-          "price": 6.70
-        },
-        {
-          "name": "Tuna Niçoise Salad",
-          "description": "Mixed greens, seared tuna, boiled egg, green beans, olives, and vinaigrette",
-          "price": 7.20
+          "name": "Greek Yogurt Parfait",
+          "description": "Layered yogurt with granola, honey, and fresh fruit (high protein breakfast)",
+          "price": 5.8
         },
         {
           "name": "Falafel Wrap",
-          "description": "Crispy falafel, hummus, tabbouleh, pickled vegetables in a warm flatbread",
-          "price": 5.90
+          "description": "Crispy falafel, hummus, and fresh salad in flatbread (vegan)",
+          "price": 6.5
+        },
+        {
+          "name": "Grilled Salmon Salad",
+          "description": "Salmon fillet on mixed greens with lemon dressing (high protein, gluten-free)",
+          "price": 7.8
+        },
+        {
+          "name": "Spicy Vegan Curry",
+          "description": "Chickpea and vegetable curry with rice (vegan, spicy)",
+          "price": 6.9
+        },
+        {
+          "name": "Turkey & Cheese Sandwich",
+          "description": "Wholegrain sandwich with turkey breast and cheddar",
+          "price": 6.7
+        },
+        {
+          "name": "Margherita Pizza",
+          "description": "Classic pizza with tomato, mozzarella, and basil (vegetarian)",
+          "price": 7.2
         }
       ]
     },
@@ -44,19 +74,34 @@
       "day": "Wednesday",
       "meals": [
         {
-          "name": "Margherita Pizza",
-          "description": "San Marzano tomato sauce, fresh mozzarella, basil, and extra virgin olive oil",
-          "price": 6.50
+          "name": "Egg & Spinach Breakfast Burrito",
+          "description": "Scrambled eggs, spinach, and cheese in a wrap (high protein breakfast)",
+          "price": 6.4
         },
         {
-          "name": "Butter Chicken with Naan",
-          "description": "Tender chicken in creamy tomato gravy served with garlic naan",
-          "price": 7.80
+          "name": "Quinoa Salad",
+          "description": "Quinoa with roasted vegetables and feta (vegetarian, gluten-free)",
+          "price": 6.6
         },
         {
-          "name": "Caprese Pasta Salad",
-          "description": "Penne pasta, cherry tomatoes, mozzarella balls, basil, and balsamic glaze",
-          "price": 5.60
+          "name": "Chicken Caesar Wrap",
+          "description": "Grilled chicken with lettuce, parmesan, and Caesar dressing",
+          "price": 7.3
+        },
+        {
+          "name": "Spicy Beef Tacos",
+          "description": "Beef tacos with chili sauce and fresh salsa (spicy)",
+          "price": 7.6
+        },
+        {
+          "name": "Tofu Stir Fry",
+          "description": "Tofu with mixed vegetables in soy sauce (vegan, high protein)",
+          "price": 6.9
+        },
+        {
+          "name": "Gluten-Free Veggie Pasta",
+          "description": "Pasta with tomato sauce and seasonal vegetables",
+          "price": 6.8
         }
       ]
     },
@@ -64,19 +109,34 @@
       "day": "Thursday",
       "meals": [
         {
-          "name": "Beef Stroganoff",
-          "description": "Tender beef strips in mushroom cream sauce served over egg noodles",
-          "price": 8.20
+          "name": "Protein Smoothie Bowl",
+          "description": "Blended fruits with protein powder and granola topping (high protein breakfast)",
+          "price": 6.3
         },
         {
-          "name": "Vegan Buddha Bowl",
-          "description": "Sweet potato, kale, avocado, black beans, quinoa, and tahini drizzle",
-          "price": 6.40
+          "name": "Caprese Salad",
+          "description": "Tomato, mozzarella, basil with balsamic glaze (vegetarian, gluten-free)",
+          "price": 6.5
         },
         {
-          "name": "Salmon Teriyaki",
-          "description": "Grilled salmon fillet glazed with teriyaki sauce, served with steamed rice and broccoli",
-          "price": 9.10
+          "name": "Spicy Chicken Pasta",
+          "description": "Pasta with grilled chicken and spicy tomato sauce",
+          "price": 7.4
+        },
+        {
+          "name": "Vegan Lentil Soup",
+          "description": "Hearty lentil soup with vegetables (vegan, gluten-free)",
+          "price": 6.2
+        },
+        {
+          "name": "Beef Burger",
+          "description": "Juicy beef patty with lettuce, tomato, and fries",
+          "price": 7.9
+        },
+        {
+          "name": "Mediterranean Veggie Wrap",
+          "description": "Grilled vegetables with hummus in a wrap (vegan)",
+          "price": 6.7
         }
       ]
     },
@@ -84,19 +144,34 @@
       "day": "Friday",
       "meals": [
         {
-          "name": "Fish & Chips",
-          "description": "Crispy battered cod, golden fries, tartar sauce, and mushy peas",
-          "price": 7.90
+          "name": "Breakfast Omelette",
+          "description": "Three-egg omelette with cheese and vegetables (high protein breakfast)",
+          "price": 6.6
         },
         {
-          "name": "Chicken Caesar Wrap",
-          "description": "Grilled chicken, romaine, parmesan, croutons, and Caesar dressing in a tortilla",
-          "price": 6.30
+          "name": "Vegan Falafel Bowl",
+          "description": "Falafel with quinoa, salad, and tahini (vegan, gluten-free)",
+          "price": 6.9
         },
         {
-          "name": "Mushroom Risotto",
-          "description": "Creamy arborio rice with mixed mushrooms, parmesan, and fresh thyme",
-          "price": 6.80
+          "name": "Grilled Chicken Salad",
+          "description": "Chicken breast with greens and vinaigrette (high protein)",
+          "price": 7.2
+        },
+        {
+          "name": "Spicy Shrimp Rice",
+          "description": "Shrimp with spicy sauce served over rice (spicy)",
+          "price": 7.8
+        },
+        {
+          "name": "Mushroom Margherita Pizza",
+          "description": "Pizza with mushrooms, mozzarella, and basil (vegetarian)",
+          "price": 7.1
+        },
+        {
+          "name": "Gluten-Free Chicken Wrap",
+          "description": "Grilled chicken and salad in gluten-free wrap",
+          "price": 7.0
         }
       ]
     }

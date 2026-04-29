@@ -1,0 +1,26 @@
+{
+  "menu": [
+    {
+      "day": "Monday",
+      "meals": [
+        { "name": "Vegan Buddha Bowl", "description": "Quinoa, roasted veggies, tahini", "price": 6.90, "tags": ["vegetarian", "healthy"] },
+        { "name": "Chicken Wrap", "description": "Grilled chicken, lettuce, mayo", "price": 5.50, "tags": ["protein"] },
+        { "name": "Beef Burger", "description": "With fries", "price": 7.50, "tags": [] }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "meals": [
+        { "name": "Veggie Pasta", "description": "Tomato sauce, basil", "price": 5.90, "tags": ["vegetarian", "budget"] },
+        { "name": "Salmon Rice Bowl", "description": "Teriyaki salmon", "price": 8.90, "tags": ["protein"] }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "meals": [
+        { "name": "Lentil Soup", "description": "With bread", "price": 4.50, "tags": ["vegetarian", "budget"] },
+        { "name": "Turkey Sandwich", "description": "Whole grain bread", "price": 6.50, "tags": ["protein", "budget"] }
+      ]
+    }
+  ]
+}
