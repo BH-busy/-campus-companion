@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import menuData from '@/data/menu.json';
+import { useCart } from '@/context/CartContext';
 
 type Meal = {
   name: string;
@@ -23,6 +24,7 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
 export default function RecommendPage() {
   const data: DayMenu[] = (menuData as any).menu;
+  const { addToCart } = useCart();
 
   const [vegetarian, setVegetarian] = useState(false);
   const [budget, setBudget] = useState(false);
@@ -30,6 +32,7 @@ export default function RecommendPage() {
   const [selectedDay, setSelectedDay] = useState<string>('Monday');
   const [likes, setLikes] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
+  const [added, setAdded] = useState<string | null>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem('mealLikes');
@@ -143,6 +146,12 @@ export default function RecommendPage() {
     alert('Copied to clipboard!');
   };
 
+  const handleAddToCart = (meal: Meal) => {
+    addToCart({ name: meal.name, price: meal.price });
+    setAdded(meal.name);
+    setTimeout(() => setAdded(null), 1000);
+  };
+
   const popularMeal = useMemo(() => {
     let max = 0;
     let top: string | null = null;
@@ -243,13 +252,13 @@ export default function RecommendPage() {
                   className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
                   {/* Image */}
-                  <div className="relative">
+                  <div className="relative h-44 overflow-hidden bg-gray-200">
                     <img
                       src={getMealImage(meal.name)}
                       alt={meal.name}
-                      className="w-full h-44 object-cover group-hover:scale-105 transition duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://picsum.photos/id/1/300/200';
+                        (e.target as HTMLImageElement).src = 'https://picsum.photos/id/30/400/300';
                       }}
                     />
                     {index === 0 && (
@@ -303,7 +312,7 @@ export default function RecommendPage() {
                       </div>
                     )}
 
-                    <div className="flex gap-4 mt-4 pt-2 border-t border-gray-100">
+                    <div className="flex gap-2 mt-4 pt-2 border-t border-gray-100 flex-wrap">
                       <button 
                         onClick={()=>handleLike(meal.name, 1)}
                         className="flex items-center gap-1 text-gray-600 hover:text-green-600 transition"
@@ -321,6 +330,16 @@ export default function RecommendPage() {
                         className="flex items-center gap-1 text-gray-600 hover:text-blue-600 transition text-sm"
                       >
                         📋 Share
+                      </button>
+                      <button 
+                        onClick={() => handleAddToCart(meal)}
+                        className={`flex items-center gap-1 px-3 py-1 rounded-lg text-sm transition ${
+                          added === meal.name
+                            ? 'bg-green-500 text-white'
+                            : 'bg-emerald-600 text-white hover:bg-emerald-700'
+                        }`}
+                      >
+                        {added === meal.name ? '✓ Added' : '🛒 Add to Cart'}
                       </button>
                     </div>
                   </div>

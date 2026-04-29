@@ -2,6 +2,8 @@
 
 import menuData from '@/data/menu.json';
 import { useState } from 'react';
+import { useCart } from '@/context/CartContext';
+import Image from 'next/image';
 
 interface Meal {
   name: string;
@@ -63,21 +65,33 @@ const getDietaryBadge = (name: string, description: string): string | null => {
   return null;
 };
 
-// Componente de imagen con manejo de errores
 const MealImage = ({ name, alt }: { name: string; alt: string }) => {
-  const [imgSrc, setImgSrc] = useState(getMealImage(name));
+  const [imgError, setImgError] = useState(false);
+  const src = imgError ? 'https://picsum.photos/id/30/400/300' : getMealImage(name);
 
   return (
-    <img
-      src={imgSrc}
-      alt={alt}
-      className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-      onError={() => setImgSrc('https://picsum.photos/id/30/400/300')}
-    />
+    <div className="relative h-48 overflow-hidden bg-gray-200">
+      {!src && <div className="animate-pulse h-full w-full bg-gray-200" />}
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+        onError={() => setImgError(true)}
+      />
+    </div>
   );
 };
 
 export default function CanteenPage() {
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState<string | null>(null);
+
+  const handleAddToCart = (meal: Meal) => {
+    addToCart({ name: meal.name, price: meal.price });
+    setAdded(meal.name);
+    setTimeout(() => setAdded(null), 1000);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -134,9 +148,14 @@ export default function CanteenPage() {
                             )}
                           </div>
                           <button
-                            className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-xl transition-all hover:scale-105"
+                            onClick={() => handleAddToCart(meal)}
+                            className={`px-5 py-2 text-white text-sm font-medium rounded-xl transition-all hover:scale-105 ${
+                              added === meal.name
+                                ? 'bg-green-500'
+                                : 'bg-emerald-600 hover:bg-emerald-700'
+                            }`}
                           >
-                            🛒 Add to Cart
+                            {added === meal.name ? 'Added ✓' : '🛒 Add to Cart'}
                           </button>
                         </div>
                       </div>

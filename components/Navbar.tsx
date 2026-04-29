@@ -1,45 +1,34 @@
-// components/Navbar.tsx
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/timetable', label: 'Timetable' },
-  { href: '/map', label: 'Campus Map' },
-  { href: '/canteen', label: 'Canteen' },
-  { href: '/lost-found', label: 'Lost & Found' },
-];
+import { useCart } from '../context/CartContext';
 
 export default function Navbar() {
-  const pathname = usePathname();
+  const { count } = useCart();
 
   return (
-    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="font-bold text-2xl text-emerald-700">
-            Crestwood
+    <nav className="bg-white shadow-md">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <Link href="/" className="text-xl font-bold text-emerald-700">
+            🏫 Crestwood Companion
           </Link>
 
-          {/* Desktop Navigation - Always Visible */}
-          <div className="flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-emerald-700 ${
-                  pathname === link.href
-                    ? 'text-emerald-700 border-b-2 border-emerald-700 pb-1'
-                    : 'text-gray-600'
-                }`}
-                aria-current={pathname === link.href ? 'page' : undefined}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link href="/timetable" className="text-gray-700 hover:text-emerald-600">📅 Timetable</Link>
+            <Link href="/map" className="text-gray-700 hover:text-emerald-600">🗺️ Map</Link>
+            <Link href="/canteen" className="text-gray-700 hover:text-emerald-600">🍽️ Canteen</Link>
+            <Link href="/recommend" className="text-gray-700 hover:text-emerald-600">🤖 Recommend</Link>
+            <Link href="/lost-found" className="text-gray-700 hover:text-emerald-600">🔍 Lost & Found</Link>
+
+            <Link href="/cart" className="relative">
+              🛒
+              {count > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full">
+                  {count}
+                </span>
+              )}
+            </Link>
           </div>
         </div>
       </div>
