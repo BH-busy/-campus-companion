@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Black Backpack",
+    "description": "Medium-sized backpack with laptop sleeve and Crestwood patch.",
+    "location": "Library - Level 2",
+    "date": "2026-04-12",
+    "status": "lost",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 2,
+    "name": "Silver Water Bottle",
+    "description": "Insulated bottle with blue sticker on the side.",
+    "location": "Science Building Lobby",
+    "date": "2026-04-13",
+    "status": "found",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 3,
+    "name": "Student ID Card",
+    "description": "Crestwood University ID belonging to A. Parker.",
+    "location": "Student Center",
+    "date": "2026-04-14",
+    "status": "found",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 4,
+    "name": "Wireless Earbuds",
+    "description": "White charging case with one earbud missing.",
+    "location": "Gym Reception",
+    "date": "2026-04-15",
+    "status": "lost",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 5,
+    "name": "Grey Hoodie",
+    "description": "Large hoodie with Crestwood Athletics logo.",
+    "location": "Basketball Court",
+    "date": "2026-04-16",
+    "status": "found",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 6,
+    "name": "Calculator",
+    "description": "Scientific calculator with initials J.B. on back.",
+    "location": "Math Hall Room 204",
+    "date": "2026-04-17",
+    "status": "lost",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 7,
+    "name": "Blue Umbrella",
+    "description": "Compact umbrella with wooden handle.",
+    "location": "Main Entrance",
+    "date": "2026-04-18",
+    "status": "found",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 8,
+    "name": "Laptop Charger",
+    "description": "65W charger compatible with USB-C laptops.",
+    "location": "Engineering Lab",
+    "date": "2026-04-19",
+    "status": "lost",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 9,
+    "name": "Notebook",
+    "description": "Red spiral notebook for History 101.",
+    "location": "Lecture Hall B",
+    "date": "2026-04-20",
+    "status": "found",
+    "contactEmail": "lostfound@crestwood.edu"
+  },
+  {
+    "id": 10,
+    "name": "Keys",
+    "description": "Set of 3 keys with green keychain.",
+    "location": "Parking Lot C",
+    "date": "2026-04-21",
+    "status": "lost",
+    "contactEmail": "lostfound@crestwood.edu"
+  }
+]
