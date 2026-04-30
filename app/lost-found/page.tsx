@@ -2,102 +2,6 @@
 
 import { useState } from 'react';
 
-// Datos de ejemplo directamente en el código para evitar problemas de import
-const lostItemsData = {
-  "items": [
-    {
-      "id": 1,
-      "name": "Black NorthFace Backpack",
-      "description": "Large backpack containing notebooks and a silver water bottle.",
-      "location": "Redwood Library",
-      "date": "2026-04-22",
-      "status": "lost",
-      "contactEmail": "sarah.johnson@crestwood.edu"
-    },
-    {
-      "id": 2,
-      "name": "Student ID Card",
-      "description": "Crestwood University student ID belonging to Michael Lee.",
-      "location": "Oakwood Student Canteen",
-      "date": "2026-04-24",
-      "status": "found",
-      "contactEmail": "security@crestwood.edu"
-    },
-    {
-      "id": 3,
-      "name": "Apple AirPods Pro",
-      "description": "White AirPods Pro case with initials 'J.R.' engraved.",
-      "location": "Evergreen Sports Complex",
-      "date": "2026-04-20",
-      "status": "lost",
-      "contactEmail": "james.roberts@crestwood.edu"
-    },
-    {
-      "id": 4,
-      "name": "Blue Water Bottle",
-      "description": "Metal reusable bottle with university stickers.",
-      "location": "Hawthorne Science Hall",
-      "date": "2026-04-18",
-      "status": "found",
-      "contactEmail": "facilities@crestwood.edu"
-    },
-    {
-      "id": 5,
-      "name": "MacBook Charger",
-      "description": "White USB-C MacBook charger and cable.",
-      "location": "Pine Learning Commons",
-      "date": "2026-04-21",
-      "status": "found",
-      "contactEmail": "libraryhelp@crestwood.edu"
-    },
-    {
-      "id": 6,
-      "name": "Grey Hoodie",
-      "description": "Oversized grey hoodie with Crestwood Athletics logo.",
-      "location": "Evergreen Sports Complex",
-      "date": "2026-04-25",
-      "status": "lost",
-      "contactEmail": "emma.clark@crestwood.edu"
-    },
-    {
-      "id": 7,
-      "name": "Casio Scientific Calculator",
-      "description": "Black calculator used for engineering exams.",
-      "location": "Cedar Lecture Theatre",
-      "date": "2026-04-19",
-      "status": "found",
-      "contactEmail": "mathdept@crestwood.edu"
-    },
-    {
-      "id": 8,
-      "name": "Silver Bracelet",
-      "description": "Thin silver bracelet with a small heart charm.",
-      "location": "Willow Café",
-      "date": "2026-04-23",
-      "status": "lost",
-      "contactEmail": "olivia.brown@crestwood.edu"
-    },
-    {
-      "id": 9,
-      "name": "Wireless Mouse",
-      "description": "Logitech wireless mouse in black color.",
-      "location": "Maple Administration Center",
-      "date": "2026-04-17",
-      "status": "found",
-      "contactEmail": "adminsupport@crestwood.edu"
-    },
-    {
-      "id": 10,
-      "name": "Chemistry Textbook",
-      "description": "Organic Chemistry textbook with highlighted notes inside.",
-      "location": "Hawthorne Science Hall",
-      "date": "2026-04-26",
-      "status": "lost",
-      "contactEmail": "daniel.wilson@crestwood.edu"
-    }
-  ]
-};
-
 type LostItem = {
   id: number;
   name: string;
@@ -106,6 +10,101 @@ type LostItem = {
   date: string;
   status: 'lost' | 'found';
   contactEmail: string;
+};
+
+const lostItemsData = {
+  items: [
+    {
+      id: 1,
+      name: "Black NorthFace Backpack",
+      description: "Large backpack containing notebooks and a silver water bottle.",
+      location: "Redwood Library",
+      date: "2026-04-22",
+      status: "lost" as const,
+      contactEmail: "sarah.johnson@crestwood.edu"
+    },
+    {
+      id: 2,
+      name: "Student ID Card",
+      description: "Crestwood University student ID belonging to Michael Lee.",
+      location: "Oakwood Student Canteen",
+      date: "2026-04-24",
+      status: "found" as const,
+      contactEmail: "security@crestwood.edu"
+    },
+    {
+      id: 3,
+      name: "Apple AirPods Pro",
+      description: "White AirPods Pro case with initials 'J.R.' engraved.",
+      location: "Evergreen Sports Complex",
+      date: "2026-04-20",
+      status: "lost" as const,
+      contactEmail: "james.roberts@crestwood.edu"
+    },
+    {
+      id: 4,
+      name: "Blue Water Bottle",
+      description: "Metal reusable bottle with university stickers.",
+      location: "Hawthorne Science Hall",
+      date: "2026-04-18",
+      status: "found" as const,
+      contactEmail: "facilities@crestwood.edu"
+    },
+    {
+      id: 5,
+      name: "MacBook Charger",
+      description: "White USB-C MacBook charger and cable.",
+      location: "Pine Learning Commons",
+      date: "2026-04-21",
+      status: "found" as const,
+      contactEmail: "libraryhelp@crestwood.edu"
+    },
+    {
+      id: 6,
+      name: "Grey Hoodie",
+      description: "Oversized grey hoodie with Crestwood Athletics logo.",
+      location: "Evergreen Sports Complex",
+      date: "2026-04-25",
+      status: "lost" as const,
+      contactEmail: "emma.clark@crestwood.edu"
+    },
+    {
+      id: 7,
+      name: "Casio Scientific Calculator",
+      description: "Black calculator used for engineering exams.",
+      location: "Cedar Lecture Theatre",
+      date: "2026-04-19",
+      status: "found" as const,
+      contactEmail: "mathdept@crestwood.edu"
+    },
+    {
+      id: 8,
+      name: "Silver Bracelet",
+      description: "Thin silver bracelet with a small heart charm.",
+      location: "Willow Café",
+      date: "2026-04-23",
+      status: "lost" as const,
+      contactEmail: "olivia.brown@crestwood.edu"
+    },
+    {
+      id: 9,
+      name: "Wireless Mouse",
+      description: "Logitech wireless mouse in black color.",
+      location: "Maple Administration Center",
+      date: "2026-04-17",
+      status: "found" as const,
+      contactEmail: "adminsupport@crestwood.edu"
+    },
+    {
+      id: 10,
+      name: "Chemistry Textbook",
+      description: "Organic Chemistry textbook with highlighted notes inside.",
+      location: "Hawthorne Science Hall",
+      date: "2026-04-26",
+      status: "lost" as const,
+      contactEmail: "daniel.wilson@crestwood.edu"
+    }
+  ]
 };
 
 const items: LostItem[] = lostItemsData.items;
@@ -123,7 +122,8 @@ export default function LostFoundPage() {
       <div className="max-w-6xl mx-auto">
         
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">🔍 Lost & Found</h1>
+          <div className="text-5xl mb-4">🔍</div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-3">Lost & Found</h1>
           <p className="text-gray-600">Report and recover belongings around Crestwood University</p>
         </div>
 
