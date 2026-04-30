@@ -1,0 +1,68 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Redwood Library",
+      "description": "Main university library with study spaces, computer labs, and research archives.",
+      "type": "library",
+      "floor": 3,
+      "openingHours": "08:00 - 22:00"
+    },
+    {
+      "id": 2,
+      "name": "Hawthorne Science Hall",
+      "description": "Modern science classrooms and laboratories for engineering and physics students.",
+      "type": "classroom",
+      "floor": 5,
+      "openingHours": "07:30 - 20:00"
+    },
+    {
+      "id": 3,
+      "name": "Oakwood Student Canteen",
+      "description": "Large dining hall serving breakfast, lunch, and dinner for students and staff.",
+      "type": "canteen",
+      "floor": 2,
+      "openingHours": "07:00 - 21:00"
+    },
+    {
+      "id": 4,
+      "name": "Evergreen Sports Complex",
+      "description": "Indoor sports arena with basketball courts, gym facilities, and fitness studios.",
+      "type": "sports",
+      "floor": 4,
+      "openingHours": "06:00 - 23:00"
+    },
+    {
+      "id": 5,
+      "name": "Maple Administration Center",
+      "description": "Administrative offices including admissions, finance, and student services.",
+      "type": "admin",
+      "floor": 3,
+      "openingHours": "09:00 - 17:00"
+    },
+    {
+      "id": 6,
+      "name": "Cedar Lecture Theatre",
+      "description": "Large lecture halls equipped with smart presentation technology.",
+      "type": "classroom",
+      "floor": 2,
+      "openingHours": "08:00 - 19:00"
+    },
+    {
+      "id": 7,
+      "name": "Willow Café",
+      "description": "Casual campus café offering coffee, snacks, and quick meals.",
+      "type": "canteen",
+      "floor": 1,
+      "openingHours": "07:30 - 18:00"
+    },
+    {
+      "id": 8,
+      "name": "Pine Learning Commons",
+      "description": "Collaborative study area with meeting rooms and digital media equipment.",
+      "type": "library",
+      "floor": 2,
+      "openingHours": "08:00 - 00:00"
+    }
+  ]
+}
